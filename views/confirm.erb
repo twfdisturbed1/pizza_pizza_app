@@ -1,0 +1,138 @@
+<form method="post" action="confirm_page">
+	<center> Thank you <%= "#{confirm_name}" %><br>
+		<p style="font-size:28px; font-weight:bold;">Please confirm your order below:</p>
+	<div class="confirm_quantity" style="font-size:26px; font-style:italic;">
+			<% p_quantity.to_i %>
+			<% if p_quantity.to_i > 1 %>
+				<%= "#{p_quantity} Pizzas" %>
+			<% else %>
+				<%= "#{p_quantity} Pizza" %>
+			<% end %><br>
+	</div>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_quantity" value="yes" required>
+			<label for="yes">Yes</label>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_quantity" value="no">	
+			<label for="no">No</label>
+
+<hr color="#E3AFBC">
+	
+	<div class="confirm_size" style="font-size:26px; font-style:italic;">
+			<%= p_size.capitalize %><br>
+	</div>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_size" value="yes" required>
+			<label for="yes">Yes</label>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_size" value="no">		
+			<label for="no">No</label>
+				
+<hr color="#E3AFBC">
+	
+	<div class="confirm_crust" style="font-size:26px; font-style:italic;">
+			<%= p_crust.capitalize %><br>
+			<% if p_crust == "hand tossed" %>
+			<img src="/images/toppings/icon_crust_ht.png">
+			<% elsif p_crust == "pan crust"%>
+			<img src="/images/toppings/icon_crust_pan.png">
+			<% elsif p_crust == "thin crust"%>
+			<img src="/images/toppings/icon_crust_thin.png"> 
+			<% elsif p_crust == "stuff crust"%>
+			<img src="/images/toppings/icon_crust_sc.png">
+			<% elsif p_crust == "cheese bites crust"%>
+			<img src="/images/toppings/icon_crust_CheesyBites_GarlicButteryBlend_100x100.png">
+			<%end%>
+	</div>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_crust" value="yes" required>
+			<label for="yes">Yes</label>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_crust" value="no">		
+			<label for="no">No</label>
+				
+	<hr color="#E3AFBC">
+
+	<div class="confirm_sauce_type" style="font-size:26px; font-style:italic;">
+			<%= confirm_sauce_type.capitalize %><br>
+			<% if confirm_sauce_type == "marinara" %>
+			<img src="/images/toppings/icon_sauce_marinara.png">
+			<% elsif confirm_sauce_type == "garlic"%>
+			<img src="/images/toppings/icon_sauce_CreamyGarlicParm.png">
+			<% elsif confirm_sauce_type == "bbq"%>
+			<img src="/images/toppings/icon_sauce_BBQ.png"> 
+			<% elsif confirm_sauce_type == "buffalo"%>
+			<img src="/images/toppings/icon_sauce_Buffalo.png">
+			<%end%>
+	</div>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_sauce_type" value="yes" required>
+			<label for="yes">Yes</label>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_sauce_type" value="no">		
+			<label for="no">No</label>
+				
+	<hr color="#E3AFBC">	
+	
+	<div class="confirm_topping" style="font-size:26px; font-style:italic;">
+			Toppings <br>
+			<% toppings.each do |top| %>
+		<% if top == "pepperoni" %>
+			Pepperoni <img src="/images/toppings/icon_topping_Pepperoni.png">
+			<% elsif top == "sausage"%>
+			Sausage <img src="/images/toppings/icon_topping_ItalianSausage.png">
+			<% elsif top == "ham"%>
+			Ham <img src="/images/toppings/icon_topping_Ham.png"> 
+			<% elsif top == "bacon"%>
+			Bacon <img src="/images/toppings/icon_topping_Bacon.png">
+			<% elsif top == "meatball"%>
+			Meatballs <img src="/images/toppings/icon_topping_Meatball.png">
+			<% elsif top == "grilledchicken"%>
+			Grilled Chicken <img src="/images/toppings/icon_topping_Chicken.png">
+			<% elsif top == "pork"%>
+			Pork <img src="/images/toppings/icon_topping_Pork.png">
+			<% elsif top == "beef"%>
+			Beef <img src="/images/toppings/icon_topping_Beef.png">
+			<% elsif top == "extra cheese"%>
+			Extra Cheese <img width="75px" heheight="75" src="/images/toppings/shredded_0x300.png">
+
+			<% elsif top == "pineapple" %>
+			Pineapples <img src="/images/toppings/icon_topping_Pineapple.png">
+			<% elsif top == "green peppers"%>
+			Green Bell Peppers <img src="/images/toppings/icon_topping_GreenBellPepper.png">
+			<% elsif top == "banana peppers"%>
+			Banana Peppers <img src="/images/toppings/icon_topping_BananaPepper.png"> 
+			<% elsif top == "mushrooms"%>
+			Mushrooms <img src="/images/toppings/icon_topping_Mushroom.png">
+			<% elsif top == "olives"%>
+			Black Olives <img src="/images/toppings/icon_topping_Olive_black.png">
+			<% elsif top == "onions"%>
+			Red Onions <img src="/images/toppings/icon_topping_Onion_Red.png">
+			<% elsif top == "jalapeno"%>
+			Jalapenos <img src="/images/toppings/icon_topping_Jalapeno.png">
+			<%end%>
+			<%end%>
+			<br>
+	</div>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_topping" value="yes" required>
+			<label for="yes">Yes</label>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_topping" value="no">		
+			<label for="no">No</label>
+			
+	<hr color="#E3AFBC">
+
+	<div class="confirm_delivery" style="font-size:26px; font-style:italic;">
+		<%= p_delivery.capitalize %><br>
+	</div>
+		<input type="radio"style="width:15px; height:15px;" name="confirm_delivery" value="yes" required>
+			<label for="yes">Yes</label>
+		<input type="radio" style="width:15px; height:15px;" name="confirm_delivery" value="no">		
+			<label for="no">No</label>
+			
+	</center>
+	<br>
+    	<hr color="#E3AFBC">
+<input type="submit" class="buttonStyle" value="Submit" name ="submit">
+</form>
+
+<input type="text" name="address_form" id="address_form" placeholder="Enter your Address" hidden />
+		
+		<input type="text" name="state" id="state" placeholder="Enter your State" hidden />
+		<br><br>
+			
+		<input type="number" name="zip" id="zip" placeholder="Enter your Zip Code" hidden / maxlength="5">
+			
+		<input type="text" name="city" id="city" placeholder="Enter your City" hidden />
+		<input type="text" name="user_name" id="user_name" placeholder="Enter your name" hidden>

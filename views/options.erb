@@ -1,0 +1,242 @@
+<p>Welcome to Pizza Pizza. When your ready please start your order below.</p>
+
+<form method="post" action="pizza_options">
+		<p style="font-size:28px; font-weight:bold;">Please enter your name.</p>
+		<div class="user_name">
+		<input class="buttonStyle" type="text" name="user_name" id="user_name" placeholder="Enter your name" required>
+		</div><div class="delivery_buttons">
+		<p style="font-size:28px; font-weight:bold;"> Will this be carryout order or do you want it for delivery? </p>
+		<input type="radio" style="width:15px; height:15px;" name="delivery_option" id="carry_out" value="carryout" onclick="ShowHideDiv()" required>
+				<label for="carryout"> Carryout </label><br>
+		<input type="radio" style="width:15px; height:15px;" name="delivery_option" id="no_dining_room" value="delivery" onclick="ShowHideDiv()">		
+				<label for="delivery"> Delivery ($3.00 Fee) </label><br>
+					
+	</div>
+	<div id="dvtext" style="display: none">
+				Address Box:
+		<input class="buttonStyle" type="text" name="address_form" id="address_form" placeholder="Enter your Address" />
+				State:
+		<input class="buttonStyle" type="text" name="state" id="state" placeholder="Enter your State" />
+		<br><br>
+				zip code:
+		<input class="buttonStyle" type="number" name="zip" id="zip" placeholder="Enter your Zip Code" / maxlength="5">
+				City:
+		<input class="buttonStyle"  type="text" name="city" id="city" placeholder="Enter your City" />
+	</div>
+	<br>
+	<div class="quantity">
+		<input class="buttonStyle" min="1" type="number" name="how_many" placeholder="Number of Pizzas" maxlength="2" value="1">
+	</div>
+	<h2> Pizza Size</h2>
+		<img src="/images/toppings/boxes.jpg"><br>
+	<div class="size_button">
+		<label for="small">Small ($5.00)</label>
+				<input type="radio" name="pizza_size" id="small_pizza" value="small" required>
+		<label for="medium">Medium ($7.00)</label>
+				<input type="radio" name="pizza_size" id="med_pizza" value="medium">
+		<label for="large">Large (9.00)</label>
+				<input type="radio" name="pizza_size" id="lg_pizza" value="large">
+	</div>
+<br>
+	<h2> Crust Style</h2>
+	<div class="crust_style">
+	<center><table width="320px" align="center">
+	<tr>
+		<th align="center" width="50%">
+			<img src="/images/toppings/icon_crust_ht.png"><br>
+			<label for="hand tossed"> Hand Tossed</label>
+			<input type="radio" name="crust_type" id="hand" value="hand tossed" required>
+		</th>
+		<th align="center" width="50%">
+			<img src="/images/toppings/icon_crust_pan.png"><br>
+			<label for="pan crust">Pan Crust</label>
+			<input type="radio" name="crust_type" id="pan" value="pan crust">
+		</th>
+	</tr>
+	<tr>
+		<td align="center" width="50%">
+			<img src="/images/toppings/icon_crust_thin.png"><br>
+			<label for="thin crust">Thin Crust</label>
+			<input type="radio" name="crust_type" id="thin" value="thin crust">
+		</td>
+		<td align="center" width="50%">
+			<img src="/images/toppings/icon_crust_sc.png"><br>	
+			<label for="stuff crust">Stuff Crust ($2.00)</label>
+			<input type="radio" name="crust_type" id="stuff" value="stuff crust">
+		</td>
+	</tr>
+	<tr>
+		<td align="center" width="100%">
+			<img src="/images/toppings/icon_crust_CheesyBites_GarlicButteryBlend_100x100.png"><br>
+			<label for="cheese bites crust">Cheese Bites Crust ($3.00)</label>
+			<input type="radio" name="crust_type" id="cheesebites" value="cheese bites crust">
+		</td>
+		<td align="center" width="0%">
+		</td>
+	</tr>
+</table></center>		
+	</div>
+<hr color="#E3AFBC">
+
+<h2> Sauce Style</h2>
+	<div class="sauce_style">
+<center><table width="320px" align="center">
+  <tr>
+    <th align="center" width="50%">
+		<img src="/images/toppings/icon_sauce_marinara.png">
+    	<label for="marinara"> Marinara</label>
+		<input type="radio" name="sauce_type" id="marinara" value="marinara" required checked>
+	</th>
+    <th align="center" width="50%">
+	<img src="/images/toppings/icon_sauce_CreamyGarlicParm.png">
+    	<label for="garlic">Creamy Garlic Parmesan</label>
+		<input type="radio" name="sauce_type" id="garlic" value="creamy garlic parmesan">
+	</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+		<img display="inline" src="/images/toppings/icon_sauce_BBQ.png"><br>
+		<label for="bbq">Barbeque</label>
+		<input type="radio" name="sauce_type" id="bbq" value="barbeque">
+	</td>
+    <td align="center" width="50%">
+		<img src="/images/toppings/icon_sauce_Buffalo.png"><br>
+		<label for="buffalo">Buffalo</label>
+		<input type="radio" name="sauce_type" id="stuff" value="buffalo">
+
+	</td>
+  </tr>
+</table></center>
+	</div>
+<hr color="#E3AFBC">
+
+<center><h2>Meats</h2>
+	<div class="topping_choices">
+	<center><table width="320px" align="center">
+<tr>
+	<th align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Pepperoni.png"><br>
+		<label for="pepperoni">Pepperoni
+		<input type="checkbox" name="toppings[]" id="pepp" value="pepperoni"></label>	
+	
+	</th>
+	<th align="center" width="33%">
+		<img src="/images/toppings/icon_topping_ItalianSausage.png"><br>
+		<label for="sausage">Sausage
+		<input type="checkbox" name="toppings[]" id="saus" value="sausage"></label>
+	</th>
+	<th align="center" width="34%">
+		<img src="/images/toppings/icon_topping_Ham.png"><br>
+		<label for="ham">Ham</label>
+		<input type="checkbox" name="toppings[]" id="ham" value="ham">
+	</th>
+</tr>
+<tr>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Bacon.png"><br>
+		<label for="bacon">Bacon</label>
+		<input type="checkbox" name="toppings[]" id="bacon" value="bacon">
+	</td>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Meatball.png"><br>
+		<label for="meatball">Meat balls</label>
+		<input type="checkbox" name="toppings[]" id="meatball" value="meatball">
+	</td>
+	<td align="center" width="34%">
+		<img src="/images/toppings/icon_topping_Chicken.png"><br>
+		<label for="grilledchicken">Grilled Chicken</label>
+		<input type="checkbox" name="toppings[]" id="grilledchicken" value="grilledchicken">
+	</td>
+</tr>
+<tr>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Beef.png"><br>
+		<label for="beef">Beef</label>
+		<input type="checkbox" name="toppings[]" id="beef" value="beef">
+	</td>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Pork.png"><br>
+		<label for="pork">Pork</label>
+		<input type="checkbox" name="toppings[]" id="pork" value="pork">
+	</td>
+	<td align="center" width="34%">
+	
+	</td>
+</tr>
+</table></center>	
+		<hr color="#E3AFBC">
+	<h2>Cheese</h2>
+<center>
+<table width="320px">
+<tr>
+	<th align="center">
+		<img width="75px" heheight="75" src="/images/toppings/shredded_0x300.png"><br>
+		<label for="extra_cheese">Extra Cheese</label>
+		<input type="checkbox" name="toppings[]" id="exchez" value="extra cheese">
+	</th>
+</tr>
+</table></center>
+		<hr color="#E3AFBC">
+			<h2>Fruits and Veggies</h2>
+<center><table width="320px" align="center">
+<tr>
+	<th align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Pineapple.png"><br>
+		<label for="pineapple">Pineapple</label>
+		<input type="checkbox" name="toppings[]" id="pine" value="pineapple">	
+	</th>
+	<th align="center" width="33%">
+		<img src="/images/toppings/icon_topping_GreenBellPepper.png"><br>
+		<label for="green_peppers">Green Peppers</label>
+		<input type="checkbox" name="toppings[]" id="gpepp" value="green peppers">
+	</th>
+	<th align="center" width="34%">
+		<img src="/images/toppings/icon_topping_BananaPepper.png">
+		<label for="banana_peppers">Banana Peppers</label>
+		<input type="checkbox" name="toppings[]" id="bpepp" value="banana peppers">
+	</th>
+</tr>
+<tr>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Mushroom.png"><br>
+		<label for="mushrooms">Mushrooms</label>
+		<input type="checkbox" name="toppings[]" id="mush" value="mushrooms">
+	</td>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Olive_black.png"><br>
+		<label for="olives">Olives</label>
+		<input type="checkbox" name="toppings[]" id="olive" value="olives">
+	</td>
+	<td align="center" width="34%">
+		<img src="/images/toppings/icon_topping_Onion_Red.png"><br>
+		<label for="onions">Onions</label>
+		<input type="checkbox" name="toppings[]" id="onion" value="onions">
+	</td>
+</tr>
+<tr>
+	<td align="center" width="33%">
+		<label for="cheese"></label>
+		<input type="checkbox" name="toppings[]" id="cheese" value="cheese" checked hidden>
+	</td>
+	<td align="center" width="33%">
+		<img src="/images/toppings/icon_topping_Jalapeno.png">
+		<label for="jalapeno">Jalapeno</label>
+		<input type="checkbox" name="toppings[]" id="jalapeno" value="jalapeno">
+	</td>
+	<td align="center" width="34%">
+	
+	</td>
+</tr>
+</table></center>
+</center>
+	</div>
+<hr color="#E3AFBC">
+<input type="submit" class="buttonStyle" value="Submit" name ="submit">
+
+
+
+</form>
+
+
+
+

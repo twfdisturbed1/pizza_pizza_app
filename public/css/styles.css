@@ -1,0 +1,204 @@
+              * {
+                  box-sizing: border-box;
+              }
+              
+              body {
+                  background: #5D001E;
+                  background-image: url("/images/bg1.jpg");
+                  background-repeat: repeat;
+                  font-family: Arial, Helvetica, sans-serif;
+                  color: #C5C6C7;
+              }
+              
+              header {
+                  background-color: rgba(93, 0, 30, 0.9);
+                  padding: 0px;
+                  text-align: center;
+                  font-size: 25px;
+                  color: #E3E2DF;
+                  border: #E3AFBC;
+                  border-style: solid;
+              }
+              
+              nav {
+                  display: inline-block;
+                  width: 100%;
+                  background: #EE4C7C;
+                  padding: 0px;
+                  border: #E3AFBC;
+                  border-style: solid;
+              }
+              
+              nav ul {
+                  list-style-type: none;
+                  padding: 0px;
+              }
+              
+              article {
+                  padding: 0px;
+                  width: 100%;
+                  text-align: center;
+                  background-color: rgba(93, 0, 20, 0.7);
+                  /* height: 500px; */
+                  border: #E3AFBC;
+                  border-style: double;
+              }
+              
+              section:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+              }
+              
+              footer {
+                  background-color: #5D001E;
+                  padding: 10px;
+                  text-align: center;
+                  color: #C5C6C7;
+                  border: #E3AFBC;
+                  border-style: solid;
+              }
+              
+              @media (max-width: 600px) {
+                  nav,
+                  article {
+                      width: 100%;
+                      height: auto;
+                  }
+              }
+              
+              a:link {
+                  color: #E3E2DF;
+              }
+              
+              a:visited {
+                  color: whitesmoke;
+              }
+              
+              a:hover {
+                  color: #FFFFFF;
+              }
+              
+              a:active {
+                  color: #E3E2DF;
+              }
+              
+              input[type=number] {
+                  border: 2px solid #E3AFBC;
+                  border-radius: 4px;
+                  background-color: #EE4C7C;
+                  color: #E3E2DF;
+                  font-size: 25px;
+              }
+              
+              input[type=text] {
+                  border: 2px solid #E3AFBC;
+                  border-radius: 4px;
+                  background-color: #EE4C7C;
+                  color: #E3E2DF;
+                  font-size: 25px;
+              }
+              
+              input[type=submit] {
+                  background-color: #EE4C7C;
+                  border-style: groove;
+                  border: 2px solid #E3AFBC;
+                  color: #E3E2DF;
+                  padding: 16px 32px;
+                  text-decoration: bold;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                  font-size: 25px;
+                  border-radius: 4px;
+              }
+              
+              .center {
+                  padding: 70px 0;
+              }
+              
+              .total {
+                  font-size: 25px;
+              }
+              
+               ::placeholder {
+                  /* Chrome, Firefox, Opera, Safari 10.1+ */
+                  color: #C5C6C7;
+                  opacity: 1;
+                  /* Firefox */
+              }
+              
+               :-ms-input-placeholder {
+                  /* Internet Explorer 10-11 */
+                  color: #C5C6C7;
+              }
+              
+               ::-ms-input-placeholder {
+                  /* Microsoft Edge */
+                  color: #C5C6C7;
+              }
+              /* Style The Dropdown Button */
+              
+              .dropbtn {
+                  background-color: #EE4C7C;
+                  color: #E3E2DF;
+                  padding: 16px;
+                  font-size: 16px;
+                  border: none;
+                  cursor: pointer;
+              }
+              /* The container <div> - needed to position the dropdown content */
+              
+              .dropdown {
+                  position: relative;
+                  display: inline-block;
+              }
+              /* Dropdown Content (Hidden by Default) */
+              
+              .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #5D001E;
+                  min-width: 160px;
+                  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                  z-index: 1;
+              }
+              /* Links inside the dropdown */
+              
+              .dropdown-content a {
+                  color: #E3E2DF;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+              }
+              /* Change color of dropdown links on hover */
+              
+              .dropdown-content a:hover {
+                  background-color: #EE4C7C
+              }
+              /* Show the dropdown menu on hover */
+              
+              .dropdown:hover .dropdown-content {
+                  display: block;
+              }
+              /* Change the background color of the dropdown button when the dropdown content is shown */
+              
+              .dropdown:hover .dropbtn {
+                  background-color: #5D001E;
+              }
+              
+              img {
+                  border-radius: 50%;
+                  -webkit-transition: -webkit-transform .8s ease-in-out;
+                  -ms-transition: -ms-transform .8s ease-in-out;
+                  transition: transform .8s ease-in-out;
+              }
+              
+              img:hover {
+                  transform: rotate(360deg);
+                  -ms-transform: rotate(360deg);
+                  -webkit-transform: rotate(360deg);
+              }
+              
+              .buttonStyle:hover {
+                  background: rgba(93, 0, 30, 0.9);
+              }

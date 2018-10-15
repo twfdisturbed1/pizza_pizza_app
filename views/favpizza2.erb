@@ -1,0 +1,74 @@
+<center>
+<p>Some home town Favorites.<br>
+<h2>Pineapple Pizza Pizza</h2> <BR>
+<img width="315px" height="236" alt="Pineapple Pizza Pizza" src="/images/pine.jpeg"><br>
+Our Pineapple pizza pizza comes on a thin crust topped with marinara sauce cheese ham and fresh chopped pineapples.<br>
+Have a taste of the islands at home .
+</p>
+<form method="post" action="pizza_options">
+		<p style="font-size:28px; font-weight:bold;">Please enter your name.</p>
+		<div class="user_name">
+		<input class="buttonStyle" type="text" name="user_name" id="user_name" placeholder="Enter your name" required>
+		</div><div class="delivery_buttons">
+		<p style="font-size:28px; font-weight:bold;"> Will this be carryout order or do you want it for delivery? </p>
+		<input type="radio" style="width:15px; height:15px;" name="delivery_option" id="carry_out" value="carryout" onclick="ShowHideDiv()" required>
+				<label for="carryout"> Carryout </label><br>
+		<input type="radio" style="width:15px; height:15px;" name="delivery_option" id="no_dining_room" value="delivery" onclick="ShowHideDiv()">		
+				<label for="delivery"> Delivery ($3.00 Fee) </label><br>
+					
+	</div>
+	<div id="dvtext" style="display: none">
+				Address Box:
+		<input class="buttonStyle" type="text" name="address_form" id="address_form" placeholder="Enter your Address" />
+				State:
+		<input class="buttonStyle" type="text" name="state" id="state" placeholder="Enter your State" />
+		<br><br>
+				zip code:
+		<input class="buttonStyle" type="number" name="zip" id="zip" placeholder="Enter your Zip Code" / maxlength="5">
+				City:
+		<input class="buttonStyle"  type="text" name="city" id="city" placeholder="Enter your City" />
+	</div>
+	<br>
+	<div class="quantity">
+		<input class="buttonStyle" min="1" type="number" name="how_many" placeholder="Number of Pizzas" maxlength="2" value="1">
+	</div>
+	<h2> Pizza Size</h2>
+		<img src="/images/toppings/boxes.jpg"><br>
+	<div class="size_button">
+		<label for="small">Small ($6.75)</label>
+				<input type="radio" name="pizza_size" id="small_pizza" value="small" required checked>
+		<label for="medium">Medium ($8.75)</label>
+				<input type="radio" name="pizza_size" id="med_pizza" value="medium">
+		<label for="large">Large (10.75)</label>
+				<input type="radio" name="pizza_size" id="lg_pizza" value="large">
+	</div>
+	<div class="crust_style">
+			<label for="thin crust"></label>
+				<input type="radio" name="crust_type" id="thin" value="thin crust" checked hidden>
+		</div>
+	<div class="sauce_style">
+
+			<label for="marinara"></label>
+				<input type="radio" name="sauce_type" id="marinara" value="marinara" checked hidden>		
+	</div>
+
+
+
+	<div class="topping_choices">
+			<label for="ham"></label>
+				<input type="checkbox" name="toppings[]" id="ham" value="ham" checked hidden>
+
+			<label for="pineapple"></label>
+				<input type="checkbox" name="toppings[]" id="pine" value="pineapple" checked hidden>
+
+				<label for="cheese"></label>
+				<input type="checkbox" name="toppings[]" id="cheese" value="cheese" checked hidden>
+ 	</div>
+
+<hr color="#E3AFBC">
+<input type="submit" class="buttonStyle" value="Submit" name ="submit">
+
+
+
+</form>
+</center>

@@ -1,0 +1,80 @@
+<form method="post" action="total_page">
+<h1>	Thank you <%=displayname%><br>
+    <br>
+    <%=  "#{displayaddress}"%>
+    <%= "#{displaycity}"%>
+    <%= "#{displaystate}"%>
+    <%= "#{displayzip}"%><br>
+	Your sub total will be $<%= sprintf "%.2f","#{p_total}" %>
+	<% tax = p_total * 0.06 %><br>
+	Your tax is <%= "#{tax.round(2)}"%><br>
+	<% finaltotal = p_total + tax%>
+	Your Final Total is $<%= sprintf "%.2f","#{finaltotal}"%>
+	
+</h1>
+</form>
+	<%if displayname.downcase == "justin bailey" %>
+			<audio autoplay>
+  			<source src="audio/Metroid.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "link" %>
+			<audio autoplay>
+  			<source src="audio/Zelda.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "zelda" %>
+			<audio autoplay>
+  			<source src="audio/Zelda.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "mario" %>
+			<audio autoplay>
+  			<source src="audio/SMB.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "luigi" %>
+			<audio autoplay>
+  			<source src="audio/SMB.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "ash" %>
+			<audio autoplay>
+  			<source src="audio/Pokemon.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "red" %>
+			<audio autoplay>
+  			<source src="audio/Pokemon.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "blue" %>
+			<audio autoplay>
+  			<source src="audio/Pokemon.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "green" %>
+			<audio autoplay>
+  			<source src="audio/Pokemon.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "yellow" %>
+			<audio autoplay>
+  			<source src="audio/Pokemon.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "samus" %>
+			<audio autoplay>
+  			<source src="audio/Metroid.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "metroid" %>
+			<audio autoplay>
+  			<source src="audio/Metroid.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "megaman" %>
+			<audio autoplay>
+  			<source src="audio/Megaman.mp3" type="audio/mpeg">
+			</audio>
+		<%elsif displayname.downcase == "mega man" %>
+			<audio autoplay>
+  			<source src="audio/Megaman.mp3" type="audio/mpeg">
+			</audio>
+		<%else%>
+	<%end%>
+<input type="text" name="address_form" id="address_form" placeholder="Enter your Address" hidden />
+		
+		<input type="text" name="state" id="state" placeholder="Enter your State" hidden />
+		<br><br>
+    	<input type="number" name="zip" id="zip" placeholder="Enter your Zip Code" hidden / maxlength="5">
+		<input type="text" name="city" id="city" placeholder="Enter your City" hidden />
+		<input type="text" name="user_name" id="user_name" placeholder="Enter your name" hidden>
